@@ -200,3 +200,37 @@ print(my_Tuple)
 """
 Flow control: IF ELSE ELIF statement 
 """
+
+hours = 13
+if hours < 15:
+      print(" Good Morning")
+elif hours < 20:
+      print("Good Afternoon")
+else:
+      print("Good Night!")
+
+
+"""
+Solve this problem with if else elif statement
+
+Grades:
+A = 90 - 100
+B = 80 - 89
+C = 70 - 79
+D = 60 - 69
+F = 0  - 59
+"""
+grade = 69
+if (grade >= 90) and (grade <= 100):
+      print("A")
+elif (grade >= 80) and (grade <= 89):  # also we can write it 80 <= grade <90
+      print("B")
+elif (grade >= 70) and (grade <= 79):
+      print("C")
+elif (grade >= 60) and (grade <= 69):
+      print("D")
+elif (grade >= 0) and (grade <= 59):
+      print("F")
+else:
+      print("Please, type the valid number!")
+
