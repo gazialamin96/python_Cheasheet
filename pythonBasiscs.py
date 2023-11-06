@@ -1,6 +1,7 @@
 print("Hello There! I Al- Amin and i am here to introduce you python basis with advance")
 print("Now starting with what is python?")
-print("Python is an object-oriented high-level programming language. It was first published by Guido van Rossum in 1991")
+print(
+    "Python is an object-oriented high-level programming language. It was first published by Guido van Rossum in 1991")
 print("When creating Python, program readability was given a lot of importance.")
 print("Here the work of the programmer is given more importance than the computer")
 
@@ -156,7 +157,6 @@ print(my_List)  # print with Added value
 my_List.insert(3, 80)  # 3 is the index number and 80 is the object/ value
 print(my_List)
 
-
 # Slicing: slicing means you're only going to present specific data if the list that you want to show
 print(my_List[2:4])  # it will show until index number 4 result: [30, 80]
 print(my_List[0:-0])  # it will show null value like this []
@@ -171,7 +171,7 @@ my_List.sort()  # it will sort my_List values to ascending order
 print(my_List)
 
 """
-Sets are similar to Lists but sets are unordered and 
+Sets- are similar to Lists but sets are unordered and 
 cannot contains duplicates 
 it also using curly brackets
 it will contains only unique values
@@ -187,7 +187,6 @@ print(my_Set)
 my_Set.update([7, 8])  # to update set 7, 8
 print(my_Set)
 
-
 """
 Tuple 
 Tuple are ordered just like lists, but they're unchangeable
@@ -196,19 +195,17 @@ it using parenthesis
 my_Tuple = (11, 12, 13, 14, 15)  # tuples are not allowed to add, delete or remove anything the tuples
 print(my_Tuple)
 
-
 """
 Flow control: IF ELSE ELIF statement 
 """
 
 hours = 13
 if hours < 15:
-      print(" Good Morning")
+    print(" Good Morning")
 elif hours < 20:
-      print("Good Afternoon")
+    print("Good Afternoon")
 else:
-      print("Good Night!")
-
+    print("Good Night!")
 
 """
 Solve this problem with if else elif statement
@@ -222,15 +219,152 @@ F = 0  - 59
 """
 grade = 69
 if (grade >= 90) and (grade <= 100):
-      print("A")
+    print("A")
 elif (grade >= 80) and (grade <= 89):  # also we can write it 80 <= grade <90
-      print("B")
+    print("B")
 elif (grade >= 70) and (grade <= 79):
-      print("C")
+    print("C")
 elif (grade >= 60) and (grade <= 69):
-      print("D")
+    print("D")
 elif (grade >= 0) and (grade <= 59):
-      print("F")
+    print("F")
 else:
-      print("Please, type the valid number!")
+    print("Please, type the valid number!")
+
+"""
+For & While Loops
+loops are used to repeat a block of code. 
+For example, if we want to show a message 100 times, then we can use a loop
+"""
+for_List = [1, 2, 3, 4, 5]
+print(for_List[0])
+print(for_List[1])
+print(for_List[2])
+print(for_List[3])
+print(for_List[4])
+
+for r in range(2, 5):
+    print(r)
+sum_of_loops = 0
+
+for t in for_List:
+    sum_of_loops += t
+
+print(sum_of_loops)
+
+print("Good Wishes for everyday:")
+for_Loop = ["Monday", "Tuesday", "Wednesday", "Thursday"]
+
+for e in for_Loop:
+    print(f"Good Morning! Happy {e}")
+
+"""
+While Loop
+"""
+q = 0
+while q < 5:
+    q += 1
+    if q == 3:
+        continue
+    print(q)
+    if q == 4:
+        break
+# output for the while loop
+
+"""
+Loops assignment: while_List = ["Monday", "Tuesday", "Wednesday", "thursday", "Friday"]
+- Create a while loop that prints all elements of the while_List variable 3 times.
+- when printing the elements use a for loop to print the elements
+- However, if the element of the for loop is equal to monday, continue without printing
+
+"""
+
+while_List = ["Monday", "Tuesday", "Wednesday", "thursday", "Friday"]
+x = 0
+while x < 3:
+    x += 1
+    for i in while_List:
+        if i == "Monday":
+            print("-------")
+            continue
+        print(i)
+
+"""
+Dictionaries: A dictionary is a kind of data structure that stores items in key-value pairs. 
+"""
+user_dictionary = {
+    'username': 'codingwithgazi',
+    'name': 'Al- Amin',
+    'age': 27
+}
+
+for (k, l) in user_dictionary.items():
+    print(f"{k}: {l}")
+
+user_dictionary2 = user_dictionary.copy()
+user_dictionary2.pop('name')
+print(user_dictionary2)
+
+"""
+function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function.
+"""
+
+
+def initiate_function():
+    color = "Red"
+    print(color)
+
+
+initiate_function()
+
+
+def function_with_parameters(first_name, last_name):
+    print(f"your name is {first_name} {last_name}")
+
+
+function_with_parameters("Bill", "Gates")
+
+
+def function_with_array(list_of_numbers):
+    for c in list_of_numbers:
+        print(c)
+
+
+number_list = [1, 2, 3, 4, 5]
+print("\nArray function calling")
+function_with_array(number_list)
+
+
+def buy_item(cost_of_item):
+    return cost_of_item + add_tax_to_item(cost_of_item)
+
+
+def add_tax_to_item(cost_of_item):
+    current_tax_rate = 0.03
+    return cost_of_item * current_tax_rate
+
+
+final_cost = buy_item(100)
+print(final_cost)
+
+
+"""
+Function Assignment 
+- Create a function that takes in 3 parameters(firstname, lastname, age)
+returns a dictionary based on those values
+"""
+
+
+def parameters(firstname, lastname, age):
+    create_dictionary = {
+        "first_Name": firstname,
+        "last_name": lastname,
+        "Age": age
+    }
+    return create_dictionary
+
+
+solution_dictionary = parameters(firstname="gazi", lastname="Al- Amin", age=27)
+print(solution_dictionary)
 
