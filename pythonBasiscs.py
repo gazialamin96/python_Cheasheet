@@ -319,8 +319,8 @@ def initiate_function():
 initiate_function()
 
 
-def function_with_parameters(first_name, last_name):
-    print(f"your name is {first_name} {last_name}")
+def function_with_parameters(first_namei, last_namei):
+    print(f"your name is {first_namei} {last_namei}")
 
 
 function_with_parameters("Bill", "Gates")
